@@ -52,7 +52,7 @@ const markup = `
     </div>
   </div>
   <div class="hphoto-wrap">
-    <img class="hphoto" src="nagendra.png" alt="Nagendra portrait at beach"/>
+    <img class="hphoto" src="https://res.cloudinary.com/dmutsybwr/image/upload/fl_preserve_transparency/v1776077201/nagendraimage_zvqn9d.jpg?_s=public-apps" alt="Nagendra portrait at beach"/>
   </div>
   <div class="hscroll"><div class="sline"></div><span>scroll</span></div>
 </section>
