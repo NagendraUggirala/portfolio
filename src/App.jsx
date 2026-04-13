@@ -42,7 +42,7 @@ const markup = `
       <span class="l1">Nagendra</span>
       <span class="l2">Uggirala</span>
     </h1>
-    <div class="hrole">Senior UI/UX Designer & Frontend Developer</div>
+    <div class="hrole">UI/UX Designer & Frontend Developer</div>
     <p class="hdesc">
       I craft intuitive and engaging digital experiences with
       a focus on simplicity and usability.
