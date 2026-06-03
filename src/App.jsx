@@ -22,7 +22,10 @@ const markup = `
     <a href="#contact" class="ncta">Contact</a>
   </div>
   <div style="display:flex;align-items:center;gap:8px">
-    <button class="hbtn" id="hb" aria-label="Toggle navigation menu" aria-controls="mn" aria-expanded="false">☰</button>
+    <button class="hbtn" id="hb" aria-label="Toggle navigation menu" aria-controls="mn" aria-expanded="false" onclick="thm()">
+      <svg id="hb-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      <svg id="hb-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
   </div>
 </nav>
 <nav class="mnav" id="mn">
@@ -67,7 +70,8 @@ const markup = `
 <!-- ABOUT -->
 <section id="about">
   <div class="about-wrap">
-    <h2 class="about-title">Professional Summary</h2>
+    <div class="slabel rv">Overview</div>
+    <h2 class="stitle rv" style="margin-bottom: 24px;"><span class="tp">Professional</span><span class="tg">Summary</span></h2>
     <p class="about-text">
       Results-driven Frontend Developer with 2+ years of experience building scalable, responsive React.js and React Native (Expo) applications. Proficient in JavaScript (ES6+), TypeScript, Redux, Context API, REST APIs, and JWT authentication. Experienced in integrating OpenAI APIs and AI-driven features into production SaaS platforms.
     </p>
@@ -98,14 +102,60 @@ const markup = `
     <div class="slabel rv">Capabilities</div>
     <h2 class="stitle rv"><span class="tp">Technical</span><span class="tg">Skills</span></h2>
     <div class="skill-cards rv">
-      <div class="skill-card"><span class="skill-ico"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React icon"/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript icon"/></span>JavaScript (ES6+), React.js, React Native (Expo)</div>
-      <div class="skill-card"><span class="skill-ico"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 icon"/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3 icon"/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS icon"/></span>HTML5, CSS3, TailwindCSS, Bootstrap, Material UI, Chakra UI, Vite, Responsive Design</div>
-      <div class="skill-card"><span class="skill-ico"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" alt="Redux icon"/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="Context API icon"/></span>Redux, Redux Toolkit, Context API, React Hooks</div>
-      <div class="skill-card"><span class="skill-ico"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python icon"/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI icon"/></span>FastAPI, Python, REST APIs, JWT Authentication</div>
-      <div class="skill-card"><span class="skill-ico"><img src="https://img.icons8.com/color/48/artificial-intelligence.png" alt="AI icon"/></span>OpenAI API, Prompt Engineering, Cursor, Midjourney, AI Workflow Automation, Antigravity, Cloud</div>
-      <div class="skill-card"><span class="skill-ico"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB icon"/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL icon"/></span>MongoDB, PostgreSQL, Vmware, AWS, Azure, Lambda, EC2, VPC</div>
-      <div class="skill-card"><span class="skill-ico"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git icon"/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub icon"/></span>Git, GitHub, CI/CD, Agile, Scrum</div>
-      <div class="skill-card"><span class="skill-ico"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code icon"/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma icon"/></span>VS Code, Figma</div>
+      <div class="skill-card new-skill-card">
+        <div class="skill-card-header">
+          <span class="skill-ico"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="Frontend"/></span>
+          <h3 class="skill-cat">Frontend</h3>
+        </div>
+        <div class="skill-tags">
+          <span>JavaScript (ES6+)</span><span>React.js</span><span>React Native (Expo)</span><span>HTML5</span><span>CSS3</span><span>TailwindCSS</span><span>Bootstrap</span><span>Material UI</span><span>Chakra UI</span><span>Vite</span><span>Responsive Design</span>
+        </div>
+      </div>
+      <div class="skill-card new-skill-card">
+        <div class="skill-card-header">
+          <span class="skill-ico"><img src="https://img.icons8.com/color/48/artificial-intelligence.png" alt="AI"/></span>
+          <h3 class="skill-cat">AI & Integration</h3>
+        </div>
+        <div class="skill-tags">
+          <span>OpenAI API</span><span>Prompt Engineering</span><span>AI-assisted Development</span><span>Cursor</span><span>Midjourney</span><span>AI Workflow Automation</span><span>Antigravity</span><span>Cloud</span>
+        </div>
+      </div>
+      <div class="skill-card new-skill-card">
+        <div class="skill-card-header">
+          <span class="skill-ico"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="Database"/></span>
+          <h3 class="skill-cat">Database & Cloud</h3>
+        </div>
+        <div class="skill-tags">
+          <span>MongoDB</span><span>PostgreSQL</span><span>Vmware</span><span>AWS</span><span>Azure</span><span>Lambda</span><span>EC2</span><span>VPC</span>
+        </div>
+      </div>
+      <div class="skill-card new-skill-card">
+        <div class="skill-card-header">
+          <span class="skill-ico"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="DevOps"/></span>
+          <h3 class="skill-cat">DevOps & Workflow</h3>
+        </div>
+        <div class="skill-tags">
+          <span>Git</span><span>GitHub</span><span>CI/CD</span><span>Agile</span><span>Scrum</span><span>VS Code</span><span>Figma</span>
+        </div>
+      </div>
+       <div class="skill-card new-skill-card">
+        <div class="skill-card-header">
+          <span class="skill-ico"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" alt="State Management"/></span>
+          <h3 class="skill-cat">State Management</h3>
+        </div>
+        <div class="skill-tags">
+          <span>Redux</span><span>Redux Toolkit</span><span>Context API</span><span>React Hooks</span>
+        </div>
+      </div>
+        <div class="skill-card new-skill-card">
+        <div class="skill-card-header">
+          <span class="skill-ico"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Backend"/></span>
+          <h3 class="skill-cat">Backend & APIs</h3>
+        </div>
+        <div class="skill-tags">
+          <span>FastAPI</span><span>Python</span><span>REST APIs</span><span>JWT Authentication</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -350,19 +400,30 @@ function App() {
     }
     window.addEventListener("scroll", updateProgressBar, { passive: true });
 
-    const hb = document.getElementById("hb");
-    const mn = document.getElementById("mn");
-    if (hb && mn) {
-      hb.addEventListener("click", () => {
-        mn.classList.toggle("open");
-        hb.textContent = mn.classList.contains("open") ? "✕" : "☰";
-        hb.setAttribute("aria-expanded", mn.classList.contains("open") ? "true" : "false");
-      });
-    }
+    window.thm = function thm() {
+      const hb = document.getElementById("hb");
+      const mn = document.getElementById("mn");
+      const iconOpen = document.getElementById("hb-open");
+      const iconClose = document.getElementById("hb-close");
+      if (!hb || !mn) return;
+      const isOpen = mn.classList.toggle("open");
+      if (iconOpen && iconClose) {
+        iconOpen.style.display = isOpen ? "none" : "block";
+        iconClose.style.display = isOpen ? "block" : "none";
+      }
+      hb.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    };
     window.cmn = function cmn() {
+      const hb = document.getElementById("hb");
+      const mn = document.getElementById("mn");
+      const iconOpen = document.getElementById("hb-open");
+      const iconClose = document.getElementById("hb-close");
       if (!hb || !mn) return;
       mn.classList.remove("open");
-      hb.textContent = "☰";
+      if (iconOpen && iconClose) {
+        iconOpen.style.display = "block";
+        iconClose.style.display = "none";
+      }
       hb.setAttribute("aria-expanded", "false");
     };
 
