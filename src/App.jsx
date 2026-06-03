@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import ChatBot from "./ChatBot";
 import HomePopupCards from "./HomePopupCards";
+import nagendraImg from "./nagendra.png";
 
 const markup = `
 <div id="cd"></div><div id="cr"></div>
@@ -10,7 +11,7 @@ const markup = `
 
 <!-- NAV -->
 <nav>
-  <a class="nav-logo" href="#hero"><span class="ndot"></span>NU<span style="color:var(--accent)">.</span></a>
+  <a class="nav-logo" href="#hero"><span class="ndot"></span>NU<span style="color:var(--accent)"></span></a>
   <div class="nl" id="nl">
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
@@ -36,27 +37,29 @@ const markup = `
 
 <!-- HERO -->
 <section id="hero">
-  <canvas id="pcanvas"></canvas>
   <div class="hgrid"></div>
-  <div class="hglow1" id="g1"></div>
-  <div class="hglow2" id="g2"></div>
-  <div class="hi">
-    <div class="hbadge">Frontend Engineer</div>
-    <h1 class="htitle">
-      <span class="l1">Nagendra</span>
-      <span class="l2">Uggirala</span>
-    </h1>
-    <div class="hrole">Frontend Developer (React-Focused)</div>
-    <p class="hdesc">
-      I build real-world, scalable web applications using React with clean architecture and API-first development.
-      Focused on high-performance interfaces and intuitive user experiences that drive product impact.
-    </p>
-    <div class="hacts">
-      <a href="#contact" class="bprim">Contact Me</a>
+  <div class="hglow1"></div>
+  <div class="hglow2"></div>
+  <canvas id="pcanvas"></canvas>
+
+  <div class="hero-content">
+    <div class="hi">
+      <div class="hbadge">Frontend Engineer</div>
+      <h1 class="htitle">
+        <span class="l1">Nagendra</span>
+        <span class="l2">Uggirala</span>
+      </h1>
+      <div class="hrole">Frontend Developer | React.js | React Native | AI Integration Engineer</div>
+      <p class="hdesc">
+        Results-driven Frontend Developer with 2+ years of experience building scalable, responsive React.js and React Native (Expo) applications. Proficient in JavaScript (ES6+), TypeScript, Redux, Context API, REST APIs, and JWT authentication. Experienced in integrating OpenAI APIs and AI-driven features into production SaaS platforms.
+      </p>
+      <div class="hacts">
+        <a href="#contact" class="bprim" style="text-decoration: none;">Contact Me</a>
+      </div>
     </div>
-  </div>
-  <div class="hphoto-wrap">
-    <img class="hphoto" src="https://res.cloudinary.com/dmutsybwr/image/upload/fl_preserve_transparency/v1776077201/nagendraimage_zvqn9d.jpg?_s=public-apps" alt="Nagendra portrait at beach"/>
+    <div class="hphoto-wrap">
+      <img class="hphoto" src="${nagendraImg}" alt="Nagendra portrait at beach"/>
+    </div>
   </div>
   <div class="hscroll"><div class="sline"></div><span>scroll</span></div>
 </section>
@@ -66,8 +69,7 @@ const markup = `
   <div class="about-wrap">
     <h2 class="about-title">Professional Summary</h2>
     <p class="about-text">
-      Frontend developer specializing in React.js, Tailwind CSS, and Vite, with hands-on experience building API-driven dashboards and reusable UI systems for real-world workflows.
-      Currently expanding into React Native for cross-platform mobile development and backend engineering with FastAPI, with a strong focus on scalable architecture, clean code, performance, and AI-powered product integration.
+      Results-driven Frontend Developer with 2+ years of experience building scalable, responsive React.js and React Native (Expo) applications. Proficient in JavaScript (ES6+), TypeScript, Redux, Context API, REST APIs, and JWT authentication. Experienced in integrating OpenAI APIs and AI-driven features into production SaaS platforms.
     </p>
     <div class="about-grid">
       <article class="about-card">
@@ -96,14 +98,14 @@ const markup = `
     <div class="slabel rv">Capabilities</div>
     <h2 class="stitle rv"><span class="tp">Technical</span><span class="tg">Skills</span></h2>
     <div class="skill-cards rv">
-      <div class="skill-card"><span class="skill-ico"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React icon"/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript icon"/></span>React.js & JavaScript (ES6+)</div>
-      <div class="skill-card"><span class="skill-ico"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 icon"/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3 icon"/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS icon"/></span>HTML5, CSS3 & Tailwind CSS</div>
-      <div class="skill-card"><span class="skill-ico"><img src="https://img.icons8.com/color/48/responsive.png" alt="Responsive design icon"/><img src="https://img.icons8.com/color/48/accessibility2.png" alt="Accessibility icon"/></span>Responsive UI & Accessibility</div>
-      <div class="skill-card"><span class="skill-ico"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" alt="Redux icon"/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="Context API icon"/></span>Redux & Context API</div>
-      <div class="skill-card"><span class="skill-ico"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js icon"/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express icon"/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI icon"/></span>Node.js, Express.js & FastAPI</div>
-      <div class="skill-card"><span class="skill-ico"><img src="https://img.icons8.com/color/48/api-settings.png" alt="API integration icon"/><img src="https://img.icons8.com/color/48/key-security.png" alt="JWT authentication icon"/></span>REST APIs & JWT Authentication</div>
-      <div class="skill-card"><span class="skill-ico"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git icon"/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub icon"/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman icon"/></span>Git, GitHub & Postman</div>
-      <div class="skill-card"><span class="skill-ico"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Native icon"/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code icon"/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma icon"/><img src="https://img.icons8.com/color/48/artificial-intelligence.png" alt="AI integration icon"/></span>React Native, VS Code, Figma & AI Integration</div>
+      <div class="skill-card"><span class="skill-ico"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React icon"/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript icon"/></span>JavaScript (ES6+), React.js, React Native (Expo)</div>
+      <div class="skill-card"><span class="skill-ico"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 icon"/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3 icon"/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS icon"/></span>HTML5, CSS3, TailwindCSS, Bootstrap, Material UI, Chakra UI, Vite, Responsive Design</div>
+      <div class="skill-card"><span class="skill-ico"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" alt="Redux icon"/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="Context API icon"/></span>Redux, Redux Toolkit, Context API, React Hooks</div>
+      <div class="skill-card"><span class="skill-ico"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python icon"/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI icon"/></span>FastAPI, Python, REST APIs, JWT Authentication</div>
+      <div class="skill-card"><span class="skill-ico"><img src="https://img.icons8.com/color/48/artificial-intelligence.png" alt="AI icon"/></span>OpenAI API, Prompt Engineering, Cursor, Midjourney, AI Workflow Automation, Antigravity, Cloud</div>
+      <div class="skill-card"><span class="skill-ico"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB icon"/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL icon"/></span>MongoDB, PostgreSQL, Vmware, AWS, Azure, Lambda, EC2, VPC</div>
+      <div class="skill-card"><span class="skill-ico"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git icon"/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub icon"/></span>Git, GitHub, CI/CD, Agile, Scrum</div>
+      <div class="skill-card"><span class="skill-ico"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code icon"/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma icon"/></span>VS Code, Figma</div>
     </div>
   </div>
 </section>
@@ -138,13 +140,13 @@ const markup = `
       <div class="ei rv">
         <div class="edot"><svg viewBox="0 0 10 10"><circle cx="5" cy="5" r="4"/></svg></div>
         <div class="ec">
-          <div class="eco">Levitica Technologies PVT LTD</div>
+          <div class="eco">Levitica Technologies Pvt Ltd</div>
           <div class="ero">Associate Software Engineer</div>
-          <div class="em"><span class="ebadge">📍 Hyderabad</span><span class="ebadge">🗓 May 2025 – Present</span><span class="ebadge">Full-time (Current)</span></div>
+          <div class="em"><span class="ebadge">📍 Hyderabad, Telangana</span><span class="ebadge">🗓 May 2024 – Present</span><span class="ebadge">Full-time</span></div>
           <ul class="eal">
-            <li>Developed reusable React.js modules for an AI-powered HR SaaS platform across Admin, HR, and candidate workflows.</li>
-            <li>Implemented secure JWT-based role access and collaborated on scalable frontend architecture using Redux and Context API.</li>
-            <li>Optimized UI consistency by standardizing component patterns, reducing duplicate code, and improving delivery speed.</li>
+            <li>Built 10+ reusable React.js components for an AI-powered HR SaaS platform across dashboards and candidate modules, improving development velocity by ~30%.</li>
+            <li>Implemented JWT-based role authentication (Admin / HR / Candidate), securing multi-tier platform access for 500+ users.</li>
+            <li>Managed global state with Redux and Context API, reducing prop-drilling by ~60% and improving application scalability.</li>
           </ul>
         </div>
       </div>
@@ -152,25 +154,11 @@ const markup = `
         <div class="edot"><svg viewBox="0 0 10 10"><circle cx="5" cy="5" r="4"/></svg></div>
         <div class="ec">
           <div class="eco">VeriTech Software IT Services</div>
-          <div class="ero">Frontend Developer Intern</div>
-          <div class="em"><span class="ebadge">📍 Pune</span><span class="ebadge">🗓 Jan 2025 – Mar 2025</span><span class="ebadge">Intern</span></div>
+          <div class="ero">Frontend Developer - Internship</div>
+          <div class="em"><span class="ebadge">📍 Pune, Maharashtra</span><span class="ebadge">🗓 Jan 2023 – Mar 2023</span><span class="ebadge">Intern</span></div>
           <ul class="eal">
-            <li>Developed responsive React.js interfaces with HTML5 and CSS3 for client-facing business modules.</li>
-            <li>Integrated REST APIs for dynamic data rendering and collaborated with backend teams on endpoint contracts.</li>
-            <li>Optimized usability and UI consistency while contributing to on-time delivery across multiple modules.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="ei rv">
-        <div class="edot"><svg viewBox="0 0 10 10"><circle cx="5" cy="5" r="4"/></svg></div>
-        <div class="ec">
-          <div class="eco">Aurobindo Pharma (Unit-5)</div>
-          <div class="ero">Electrical Executive Intern (E4)</div>
-          <div class="em"><span class="ebadge">📍 Hyderabad</span><span class="ebadge">🗓 May 2024 – Nov 2024</span><span class="ebadge">Intern</span></div>
-          <ul class="eal">
-            <li>Improved reporting workflows and documented structured maintenance processes for better operational clarity.</li>
-            <li>Collaborated with cross-functional teams to enhance reliability through proactive monitoring and issue tracking.</li>
-            <li>Strengthened problem-solving, process improvement, and teamwork in a high-scale industrial environment.</li>
+            <li>Developed responsive React.js UI components using HTML5, CSS3, and Bootstrap; ensured cross-browser compatibility.</li>
+            <li>Integrated REST APIs for dynamic data rendering and collaborated with the backend team on API contract design.</li>
           </ul>
         </div>
       </div>
@@ -199,24 +187,82 @@ const markup = `
 <!-- EDUCATION -->
 <section id="education">
   <div class="sw">
-    <div class="slabel rv">Academic</div>
+    <div class="slabel rv">Academic & Achievements</div>
     <h2 class="stitle rv"><span class="tp">Education &</span><span class="tg">Certifications</span></h2>
-    <div class="edu rv" style="margin-bottom:40px">
-      <div class="eico">🎓</div>
-      <div>
-        <div class="edeg">Bachelor of Technology (B.Tech) — Electrical and Electronics Engineering</div>
-        <div class="esch">GIET Engineering College</div>
-        <div class="erow">
-          <span class="epill">Duration: 2020 – 2023</span>
-          <span class="epill">Branch: Electrical and Electronics Engineering</span>
-          <span class="epill">Score: CGPA 7.6</span>
+    
+    <div class="edu-grid">
+      
+      <!-- Left Column: Education -->
+      <div class="edu-col">
+        <h3 class="edu-col-title rv">Education</h3>
+        <div class="edu-timeline rv">
+          
+          <div class="edu-item">
+            <div class="edu-dot">🎓</div>
+            <div class="edu-content">
+              <h4 class="edu-degree">Bachelor of Technology (B.Tech)</h4>
+              <div class="edu-school">GIET Engineering College</div>
+              <p class="edu-details">Electrical and Electronics Engineering <br/> CGPA: 7.6 | 2020 – 2023</p>
+            </div>
+          </div>
+          
+          <div class="edu-item">
+            <div class="edu-dot">🏫</div>
+            <div class="edu-content">
+              <h4 class="edu-degree">Diploma in EEE</h4>
+              <div class="edu-school">GIET Polytechnic College, Rajahmundry</div>
+              <p class="edu-details">Percentage: 78% | 2017 – 2020</p>
+            </div>
+          </div>
+          
         </div>
       </div>
-    </div>
-    <div class="certg rv">
-      <div class="cert"><div class="cico">🏫</div><div><div class="ctit">Diploma — Electrical and Electronics Engineering</div><div class="corg">GIET Polytechnic College, Rajahmundry · Duration: 2017 – 2020 · Score: 78%</div></div></div>
-      <div class="cert"><div class="cico">📘</div><div><div class="ctit">Secondary School Certificate (SSC)</div><div class="corg">ZPP High School, Jonnada · Score: CGPA 8.8</div></div></div>
-      <div class="cert"><div class="cico">💻</div><div><div class="ctit">Full Stack Development Program</div><div class="corg">NxtWave Student Program</div></div></div>
+      
+      <!-- Right Column: Certifications -->
+      <div class="edu-col">
+        <h3 class="edu-col-title rv">Certifications</h3>
+        <div class="cert-list rv">
+          
+          <div class="cert-card">
+            <div class="cert-icon">🎖️</div>
+            <div class="cert-info">
+              <h4>NxtWave CCBP 4.0 - React.js</h4>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon">🎖️</div>
+            <div class="cert-info">
+              <h4>NxtWave CCBP 4.0 - Node.js</h4>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon">🎖️</div>
+            <div class="cert-info">
+              <h4>NxtWave CCBP 4.0 - Python Programming</h4>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon">🎖️</div>
+            <div class="cert-info">
+              <h4>NxtWave CCBP 4.0 - Git Developer</h4>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon">🎖️</div>
+            <div class="cert-info">
+              <h4>NxtWave CCBP 4.0 - HTML & CSS</h4>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon">🏆</div>
+            <div class="cert-info">
+              <h4>100 Days of Code Challenge (LinkedIn)</h4>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
     </div>
   </div>
 </section>
@@ -425,37 +471,77 @@ function App() {
     const githubUsername = "NagendraUggirala";
     const fallbackProjects = [
       {
-        name: "Smart-Hospital-Management-Platform",
-        description:
-          "Problem: fragmented hospital workflows slowed patient servicing. Solution: built a role-based hospital platform with scheduling, symptom analysis, and reporting. Result: a unified experience across patient, doctor, and admin journeys.",
+        name: "Hospital Management System (HMS)",
+        bullets: [
+          "Designed 9 role-specific dashboards and an Admin Dashboard with secure JWT authentication and CRUD operations.",
+          "Integrated OpenAI API for AI-powered symptom analysis and automated patient report summarization.",
+          "Built cross-platform mobile app with React Native (Expo) providing real-time patient and staff data access."
+        ],
         tags: ["react", "fullstack", "ai"],
-        stack: ["React.js", "React Native", "Node.js", "MongoDB", "AI APIs", "TailwindCSS"],
+        stack: ["React.js", "React Native", "TailwindCSS", "FastAPI", "PgAdmin", "OpenAI"],
         stars: 0,
         forks: 0,
         icon: "🏥",
-        url: "https://github.com/NagendraUggirala",
+        github: "https://github.com/NagendraUggirala/HMS-APP-",
+        // homepage: "https://leviticatechnologies.com"
       },
       {
-        name: "AI-Recruitment-SaaS-Platform",
-        description:
-          "Problem: manual candidate screening consumed recruiter time. Solution: developed an AI-assisted recruitment SaaS with secure role-based workflows and reusable React components. Result: faster shortlisting and more consistent hiring operations.",
+        name: "Levitica Technologies – Institute Web Platform",
+        bullets: [
+          "Developed responsive React.js modules including an Admin Dashboard with CRUD operations and analytics views.",
+          "Implemented secure JWT authentication and session management, enabling role-based access across admin and user tiers.",
+          "Integrated REST APIs for real-time data operations and optimized component architecture, reducing redundant re-renders."
+        ],
+        tags: ["react", "fullstack"],
+        stack: ["React.js", "FastAPI", "PgAdmin", "JWT", "REST APIs"],
+        stars: 0,
+        forks: 0,
+        icon: "🏢",
+        github: "https://github.com/NagendraUggirala",
+        // homepage: "https://leviticatechnologies.com"
+      },
+      {
+        name: "AI Recruitment & HR Platform (SaaS)",
+        bullets: [
+          "Built 15+ responsive UI components for job listings, candidate profiles, and HR dashboards across 3 core modules.",
+          "Integrated AI-powered candidate screening API, reducing manual HR review effort by an estimated 40%.",
+          "Implemented role-based access control (Admin, HR) with JWT for secure multi-tier platform access."
+        ],
         tags: ["react", "ai", "fullstack"],
-        stack: ["React.js", "Redux", "Context API", "JWT", "AI APIs", "TailwindCSS"],
+        stack: ["React.js", "TailwindCSS", "Context API", "JWT", "OpenAI"],
         stars: 0,
         forks: 0,
         icon: "🤖",
-        url: "https://github.com/NagendraUggirala",
+        github: "https://github.com/NagendraUggirala/AI-HR-Frontend-",
+        // homepage: "https://ai-hr-frontend-sigma.vercel.app/"
       },
       {
-        name: "Techlynx-Business-Website",
-        description:
-          "Problem: the business needed a stronger digital presence to generate leads. Solution: delivered a responsive company website with clear information architecture and dynamic content modules. Result: improved credibility, mobile usability, and user engagement.",
+        name: "MTCE Education Management Platform",
+        bullets: [
+          "Developed a full-stack education management platform featuring an Admin Dashboard for managing courses, students, and faculty records.",
+          "Built reusable responsive UI components and optimized REST API integrations, improving platform load performance and maintainability."
+        ],
+        tags: ["fullstack", "react"],
+        stack: ["React.js", "PgAdmin", "FastAPI", "JWT", "REST APIs"],
+        stars: 0,
+        forks: 0,
+        icon: "🎓",
+        github: "https://github.com/NagendraUggirala",
+        // homepage: "https://mtce.edu.in"
+      },
+      {
+        name: "Static Website - Techlynx Innovations Pvt Ltd",
+        bullets: [
+          "Developed a fully responsive company website with mobile-first design and CSS animations, improving visual engagement.",
+          "Deployed production site under Techlynx Web Development division, demonstrating frontend expertise and cross-device compatibility."
+        ],
         tags: ["fullstack"],
-        stack: ["PHP", "HTML5", "CSS3", "Responsive Design"],
+        stack: ["PHP", "HTML5", "CSS3"],
         stars: 0,
         forks: 0,
         icon: "🌐",
-        url: "https://github.com/NagendraUggirala",
+        github: "https://github.com/NagendraUggirala",
+        // homepage: "https://techlynxinnovations.com"
       },
     ];
 
@@ -506,7 +592,8 @@ function App() {
         const tags = project.tags || getProjectTags(project.topics, project.language);
         const icon = project.icon || getProjectIcon(project.name, project.description);
         const stack = project.stack || (project.language ? [project.language] : ["JavaScript"]);
-        const link = project.url || project.html_url || "#";
+        const github_link = project.github || project.html_url || null;
+        const live_link = project.homepage || null;
         const name = (project.name || "").replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
         const card = document.createElement("div");
         card.className = "pc rv";
@@ -516,18 +603,20 @@ function App() {
           <div class="ph">
             <div class="pi">${icon}</div>
             <div class="pls">
-              <a href="${link}" class="pl" target="_blank" rel="noopener" title="GitHub" aria-label="View source code on GitHub">
+              ${github_link ? `<a href="${github_link}" class="pl" target="_blank" rel="noopener" title="GitHub" aria-label="View source code on GitHub">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.09.39-1.98 1.03-2.67-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.8c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.69 1.03 1.58 1.03 2.67 0 3.82-2.34 4.66-4.57 4.91.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>
-              </a>
-              ${project.homepage ? `<a href="${project.homepage}" class="pl" target="_blank" rel="noopener" title="Live" aria-label="View live project">🔗</a>` : ""}
+              </a>` : ""}
+              ${live_link ? `<a href="${live_link}" class="pl" target="_blank" rel="noopener" title="Live" aria-label="View live project">🔗</a>` : ""}
             </div>
           </div>
           <div class="pt">${name}</div>
-          <div class="pd">${truncateDescription(project.description)}</div>
+          <div class="pd" style="margin-bottom:12px;">
+            ${project.bullets ? `<ul style="margin:0; padding-left:20px; list-style-type:disc;">${project.bullets.map(b => `<li style="margin-bottom:6px;">${b}</li>`).join("")}</ul>` : truncateDescription(project.description)}
+          </div>
           <div class="pst">${stack.map((t) => `<span class="ptch">${t}</span>`).join("")}</div>
           <div class="pacts">
-            <a href="${link}" class="pbtn" target="_blank" rel="noopener" aria-label="View code for ${name}">View Code</a>
-            ${project.homepage ? `<a href="${project.homepage}" class="pbtn pbtn-live" target="_blank" rel="noopener" aria-label="View live demo for ${name}">Live Demo</a>` : ""}
+            ${github_link ? `<a href="${github_link}" class="pbtn" target="_blank" rel="noopener" aria-label="View code for ${name}">View Code</a>` : ""}
+            ${live_link ? `<a href="${live_link}" class="pbtn pbtn-live" target="_blank" rel="noopener" aria-label="View live demo for ${name}">Live Demo</a>` : ""}
           </div>
           <div class="pss">
             <span class="pstat"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>${project.stargazers_count || project.stars || 0}</span>
@@ -539,21 +628,7 @@ function App() {
       });
       initializeProjectFilters();
     }
-    async function fetchGitHubProjects() {
-      try {
-        const res = await fetch(`https://api.github.com/users/${githubUsername}/repos?sort=updated&per_page=9&type=public`, {
-          headers: { Accept: "application/vnd.github.v3+json" },
-        });
-        if (!res.ok) throw new Error("fetch failed");
-        const all = await res.json();
-        const repos = all.filter((repo) => !repo.fork && repo.name !== githubUsername).slice(0, 6);
-        if (!repos.length) throw new Error("empty");
-        renderProjects(repos);
-      } catch {
-        renderProjects(fallbackProjects);
-      }
-    }
-    fetchGitHubProjects();
+    renderProjects(fallbackProjects);
 
     const form = document.getElementById("cf");
     if (form) {

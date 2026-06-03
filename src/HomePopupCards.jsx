@@ -6,7 +6,7 @@ const HOME_CARDS = [
     icon: "work",
     title: "Current Role",
     text: "Associate Software Engineer at Levitica Technologies Pvt Ltd, Hyderabad.",
-    image: "https://www.leviticatechnologies.com/assets/Levitica%20logo.png",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80",
     href: "#experience",
   },
   {
