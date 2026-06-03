@@ -47,14 +47,17 @@ const markup = `
 
   <div class="hero-content">
     <div class="hi">
-      <div class="hbadge">Frontend Engineer</div>
+      <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 20px; flex-wrap: wrap;">
+        <div class="hbadge" style="margin-bottom: 0;">Frontend Engineer</div>
+        <div class="hbadge" style="margin-bottom: 0; background: rgba(16, 185, 129, 0.1); color: #10b981; border-color: rgba(16, 185, 129, 0.2);">✨ 2+ Years Experience</div>
+      </div>
       <h1 class="htitle">
         <span class="l1">Nagendra</span>
         <span class="l2">Uggirala</span>
       </h1>
       <div class="hrole">Frontend Developer | React.js | React Native | AI Integration Engineer</div>
       <p class="hdesc">
-        Results-driven Frontend Developer with 2+ years of experience building scalable, responsive React.js and React Native (Expo) applications. Proficient in JavaScript (ES6+), TypeScript, Redux, Context API, REST APIs, and JWT authentication. Experienced in integrating OpenAI APIs and AI-driven features into production SaaS platforms.
+        I am a passionate Frontend Developer who loves transforming complex problems into elegant, user-friendly digital solutions. I specialize in building modern web and mobile applications using React, with a strong focus on seamless AI integrations and scalable architectures.
       </p>
       <div class="hacts">
         <a href="#contact" class="bprim" style="text-decoration: none;">Contact Me</a>
@@ -200,6 +203,7 @@ const markup = `
           </ul>
         </div>
       </div>
+
       <div class="ei rv">
         <div class="edot"><svg viewBox="0 0 10 10"><circle cx="5" cy="5" r="4"/></svg></div>
         <div class="ec">
