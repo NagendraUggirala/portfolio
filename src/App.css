@@ -1402,7 +1402,7 @@ nav.mnav {
 }
 
 .hp-modal {
-  width: min(860px, 100%);
+  width: min(400px, 100%);
   background: #ffffff;
   border: 1px solid rgba(68, 106, 151, 0.24);
   border-radius: 18px;
@@ -1449,7 +1449,7 @@ nav.mnav {
 
 .hp-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 12px;
   padding: 44px 14px 14px;
 }
@@ -1597,7 +1597,7 @@ nav.mnav {
 }
 
 .hp-modal {
-  width: min(860px, 100%);
+  width: min(400px, 100%);
   background: #ffffff;
   border: 1px solid rgba(68, 106, 151, 0.24);
   border-radius: 18px;
@@ -1645,7 +1645,7 @@ nav.mnav {
 
 .hp-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 12px;
   padding: 44px 14px 14px;
 }

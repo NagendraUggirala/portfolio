@@ -9,24 +9,7 @@ const HOME_CARDS = [
     image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80",
     href: "#experience",
   },
-  {
-    id: "hms",
-    icon: "mobile",
-    title: "HMS Mobile App",
-    text: "Cross-platform hospital management app with role-based workflows and AI-assisted modules.",
-    image:
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80",
-    href: "#projects",
-  },
-  {
-    id: "ai-recruiter",
-    icon: "ai",
-    title: "AI Recruiter Project",
-    text: "SaaS hiring platform with role-based access, reusable React components, and smart screening flow.",
-    image:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=80",
-    href: "#projects",
-  },
+
 ];
 
 function renderCardIcon(type) {
